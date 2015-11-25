@@ -6,19 +6,23 @@
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-  <header>
-    <h2>Run Timer</h2>
-  </header>
+  <div class="container">
+    <header>
+      <p>Run Timer</p>
+    </header>
 
-  <div class="run-list">
-    <ul></ul>
-    <input type="date" id="run-date" value="#">
-    <input type="timer" id="run-time" value="HH:MM:SS">
-    <div id="outlet"></div>
+    <div class="run-list">
+      <ul >
+        <!-- <input class="list-items" type="date" id="run-date" value=""> -->
+        <div class="list-items" id="run-date">Month 0, 0000</div>
+        <div class="list-items" id="run-time">00:00:00</div>
+        <!-- <div id="outlet"></div> -->
+      </ul>
 
-    <button><i class="fa fa-plus"></i></button>
+      <a href="#"><i class="fa fa-plus-circle"></i></i></a>
+    </div>
+
   </div>
-
 
   <script src="/vendor.js" charset="utf-8"></script>
   <script src="/app.js" charset="utf-8"></script>

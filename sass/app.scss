@@ -13,3 +13,59 @@ $Regular-Text: rgba(255, 255, 255, 0.6);
 $Placeholder-Text: rgba(255, 255, 255, 0.4);
 $Green-Text: #92cbc5;
 $Button-Text-Grey: #1c1c1c;
+$Background-Black: #242524;
+
+.container {
+  width: (480px);
+  background: $Background-Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+header {
+  height: 3rem;
+  background: $Header-Bar-Blue;
+  color: $Title-White;
+  font-size: 24px;
+  line-height: 3rem;
+  padding-left: 1rem;
+}
+
+.run-list {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px $Placeholder-Text solid;
+}
+
+.list-items {
+  flex: 1;
+  justify-content: flex-start;
+}
+ul {
+  padding-left: 0;
+  border-bottom: 1px solid;
+  color: $Placeholder-Text;
+  margin: 5px 10px 5px 10px;
+}
+#run-date {
+  color: $Regular-Text;
+  font-size: 2rem;
+
+}
+
+#run-time {
+  text-align: right;
+  color: $Green-Text;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.fa {
+  float: right;
+  color: $Button-Green;
+  background-color: $Background-Black;
+  font-size: 3rem;
+  padding: 0.5rem;
+  margin-right: 0.6rem;
+}
