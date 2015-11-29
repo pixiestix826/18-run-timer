@@ -51,14 +51,16 @@ ul {
 #run-date {
   color: $Regular-Text;
   font-size: 1.5rem;
-  vertical-align: middle;
-
+  border: 0;
+  background: none;
+  margin-top: 0.8rem;
 }
 
 #run-time {
   float: right;
   color: $Green-Text;
   padding-bottom: 1rem;
+  margin-top: 1rem;
   font-size: 2rem;
 }
 
