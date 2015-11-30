@@ -18,9 +18,9 @@ var Router = Backbone.Router.extend({
 
   listAllRuns() {
     // Create an instance of RunIndexView
-    var postIndex = new RunIndexView({collection: this.posts});
+    var runIndex = new RunIndexView({collection: this.posts});
 
-    $('#outlet').html(postIndex.$el);
+    $('#outlet').html(runIndex.$el);
   },
 
 });
