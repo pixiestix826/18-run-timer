@@ -38,6 +38,6 @@ export default Backbone.View.extend({
       var listItem = new RunPost({model: post});
 
       this.$el.append(listItem.render());
-    })
-  }
-})
+    });
+  },
+});
