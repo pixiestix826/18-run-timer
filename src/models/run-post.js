@@ -5,6 +5,5 @@ export default Backbone.Model.extend({
   defaults: {
     time: '',
     date: '',
-    notes: '',
   },
 });

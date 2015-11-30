@@ -1,3 +1,5 @@
+import RunListCollection from './collections/run-list';
+import RunIndexView from './views/posts-index';
 
 var Router = Backbone.Router.extend({
   routes: {
@@ -6,6 +8,21 @@ var Router = Backbone.Router.extend({
     ':id': 'runDetail',
     ':id/edit': 'editRun',
   },
+
+  posts: null,
+
+  initialize() {
+    this.posts = new RunListCollection();
+    this.posts.fetch();
+  },
+
+  listAllRuns() {
+    // Create an instance of RunIndexView
+    var postIndex = new RunIndexView({collection: this.posts});
+
+    $('#outlet').html(postIndex.$el);
+  },
+
 });
 
 export default Router;
