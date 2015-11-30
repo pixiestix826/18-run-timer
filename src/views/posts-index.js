@@ -1,4 +1,4 @@
-var ListItem = Backbone.View.extend({
+var RunList = Backbone.View.extend({
   model: null,
 
   tagName: 'li',
@@ -6,15 +6,16 @@ var ListItem = Backbone.View.extend({
   initialize() {
     // Wire up model events
   },
-  render () {
+
+  render() {
     // Sets up the DOM
     this.$el.html(`
       ${this.model.get('date')} - ${this.model.get('time')}
 
         <a href="#"><i class="fa fa-plus-circle"></i></i></a>
         `);
-      return this.$el;
-    }
+    return this.$el;
+  },
 });
 
 export default Backbone.View.extend({
@@ -22,7 +23,7 @@ export default Backbone.View.extend({
 
   tagName: 'ul',
 
-  initialize(){
+  initialize() {
     // Setup events
     this.listenTo(this.collection, 'change reset add remove', this.render);
 
@@ -35,7 +36,7 @@ export default Backbone.View.extend({
 
     // For each item in collection make a new 'li'
     this.collection.forEach((post) => {
-      var listItem = new RunPost({model: post});
+      var listItem = new RunList({model: post});
 
       this.$el.append(listItem.render());
     });
