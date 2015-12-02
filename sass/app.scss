@@ -16,7 +16,7 @@ $Button-Text-Grey: #1c1c1c;
 $Background-Black: #242524;
 
 .container {
-  width: (480px);
+  max-width: (360px);
   background: $Background-Black;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;

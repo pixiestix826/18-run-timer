@@ -1,10 +1,11 @@
-var RunList = Backbone.View.extend({
+var RunView = Backbone.View.extend({
   model: null,
 
   tagName: 'li',
 
-  initialize() {
+  template(model) {
     // Wire up model events
+    return `<a href="${#new}">${model.date} - ${model.time}</a>`;
   },
 
   render() {
@@ -36,7 +37,7 @@ export default Backbone.View.extend({
 
     // For each item in collection make a new 'li'
     this.collection.forEach((post) => {
-      var listItem = new RunList({model: post});
+      var listItem = new RunView({model: post});
 
       this.$el.append(listItem.render());
     });
