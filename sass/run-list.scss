@@ -1,0 +1,26 @@
+.run-list {
+  margin: 1.5rem 1rem 4rem 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px $Placeholder-Text solid;
+}
+
+.list-items {
+  font-size: 1.5rem;
+}
+
+.date {
+  color: $Regular-Text;
+}
+
+.time {
+  color: $Green-Text;
+  margin-left: 9.5rem;
+}
+
+.fa {
+  color: $Button-Green;
+  background-color: $Background-Black;
+  font-size: 3rem;
+  padding: 0.5rem;
+  margin-left: 25.5rem;
+}

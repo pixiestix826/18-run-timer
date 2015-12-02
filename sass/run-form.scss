@@ -1,0 +1,34 @@
+.heading {
+  margin: 2rem 0 0 1rem;
+  color: $Title-White;
+  font-weight: lighter;
+}
+
+.list-items {
+  font-size: 1.5rem;
+  vertical-align: baseline;
+  height: 4rem;
+  width: 28rem;
+  margin: 1rem;
+  border: none;
+  background: none;
+  color: $Placeholder-Text;
+  border-bottom: 1px $Placeholder-Text solid;
+}
+
+
+.btn {
+  padding: 0.8rem;
+  width: 6rem;
+  border-radius: 2px;
+  border: none;
+  margin: 2rem 0 4rem 1rem;
+}
+
+.save {
+  background: $Button-Green;
+  margin-left: 15.5rem;
+}
+.cancel {
+  background: $Button-Grey;
+}
