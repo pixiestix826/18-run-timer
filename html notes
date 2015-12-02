@@ -1,7 +1,11 @@
-<ul >
- <li>
-  <input class="list-items" type="date" id="run-date" value="">
-  <input class="list-items" type="time" id="run-time">
-  <textarea class="list-items" rows="6" cols="32"></textarea>
- </li>
-</ul>
+
+<div class="run-list">
+  <ul>
+    <li>
+      <span class="list-items date">December 1, 2015</span>
+      <span class="list-items time">00:00:00</span>
+    </li>
+  </ul>
+</div>
+
+  <a href="#"><i class="fa fa-plus-circle"></i></i></a>
