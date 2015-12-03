@@ -5,7 +5,7 @@ var RunView = Backbone.View.extend({
 
   template(model) {
     // Wire up model events
-    return `<a href="${#new}">${model.date} - ${model.time}</a>`;
+    return `<a href="#${model.id}">${model.date} - ${model.time}</a>`;
   },
 
   render() {
