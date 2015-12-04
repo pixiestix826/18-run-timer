@@ -1,10 +1,10 @@
-.new-heading {
+.my-heading {
   color: $Title-White;
-  margin-left: 1rem;
+  margin-left: 2rem;
   font-weight: lighter;
 }
 
-.run-items {
+.run-detail {
   font-size: 1.5rem;
   height: 4rem;
   width: 100%;
@@ -18,18 +18,17 @@
 .btn {
   padding: 0.8rem;
   width: 6rem;
-  border-radius: 2px;
-  border: none;
+  border-radius: 100%;
   margin: 2rem 0 4rem 1rem;
 }
 
-.save {
+.edit {
   position: fixed;
   bottom: 0;
   right: 1rem;
   background: $Button-Green;
 }
-.cancel {
+.back {
   position: fixed;
   bottom: 0;
   background: $Button-Grey;

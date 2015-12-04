@@ -1,26 +1,33 @@
 .run-list {
   margin: 1.5rem 1rem 4rem 0.8rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px $Placeholder-Text solid;
+  background: $Background-Black;
+
+  li {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px $Placeholder-Text solid;
+  }
 }
 
 .list-items {
   font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .date {
+  flex: 1;
   color: $Regular-Text;
 }
 
 .time {
   color: $Green-Text;
-  margin-left: 14.5rem;
 }
 
 .fa {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
   color: $Button-Green;
-  background-color: $Background-Black;
   font-size: 3rem;
-  padding: 0.5rem;
-  margin-left: 18rem;
 }
