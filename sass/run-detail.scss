@@ -4,7 +4,7 @@
   font-weight: lighter;
 }
 
-.run-detail {
+.run-items {
   font-size: 1.5rem;
   height: 4rem;
   width: 100%;
@@ -24,12 +24,13 @@
 
 .edit {
   position: fixed;
-  bottom: 0;
+  bottom: 2rem;
   right: 1rem;
   background: $Button-Green;
 }
 .back {
   position: fixed;
   bottom: 0;
+  left: 1rem;
   background: $Button-Grey;
 }
