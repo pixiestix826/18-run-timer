@@ -1,5 +1,7 @@
+import RunModel from './models/run';
 import RunListCollection from './collections/run-list';
 import RunIndexView from './views/posts-index';
+import RunFormView from './views/run-form';
 
 var Router = Backbone.Router.extend({
   routes: {
@@ -11,6 +13,11 @@ var Router = Backbone.Router.extend({
 
   posts: null,
 
+  cleanUpListners() {
+    // Stops run details from showing up again
+    this.collection.off('sync');
+  },
+
   initialize() {
     this.posts = new RunListCollection();
     this.posts.fetch();
@@ -18,9 +25,21 @@ var Router = Backbone.Router.extend({
 
   listAllRuns() {
     // Create an instance of RunIndexView
-    var runIndex = new RunIndexView({collection: this.posts});
+    var runIndex = new RunIndexView({collection: this.collection});
 
-    $('#outlet').html(runIndex.$el);
+    $('#outlet').html(runIndex.el);
+  },
+
+  newRunForm() {
+    this.cleanUpListners();
+
+    // Create an empty item model
+    var run = new RunModel();
+
+    // Show form to user
+    var form = new RunForm({model: run, collection: this.collection});
+
+    $('#outlet').html(form.el);
   },
 
 });

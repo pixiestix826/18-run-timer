@@ -7,8 +7,7 @@ Run list
       <span class="list-items time">00:00:00</span>
     </li>
   </ul>
-  <a href="#" class="plus button"><i class="fa fa-plus-circle"></i></a>
-</div>
+  <a href="#" class="plus button"><i class="fa fa-plus"></i></a>
 </div>
 
 Run Detail
