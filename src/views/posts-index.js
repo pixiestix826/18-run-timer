@@ -5,16 +5,15 @@ var RunView = Backbone.View.extend({
 
   template(model) {
     // Wire up model events
-    return `<a href="#${model.id}">${model.date} - ${model.time}</a>`;
+    return `<li>${model.date} - ${model.time}</li>`;
   },
 
   render() {
     // Sets up the DOM
-    this.$el.html(`
-      ${this.model.get('date')} - ${this.model.get('time')}
+    this.$el.html(
+      `${this.model.get('date')} - ${this.model.get('time')}
 
-        <a href="#new"><i class="fa fa-plus-circle"></i></i></a>
-        `);
+        <a href="#new"><i class="fa fa-plus-circle"></i></i></a>`);
     return this.$el;
   },
 });
