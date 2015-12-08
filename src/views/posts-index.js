@@ -13,7 +13,7 @@ var RunView = Backbone.View.extend({
     this.$el.html(`
       ${this.model.get('date')} - ${this.model.get('time')}
 
-        <a href="#"><i class="fa fa-plus-circle"></i></i></a>
+        <a href="#new"><i class="fa fa-plus-circle"></i></i></a>
         `);
     return this.$el;
   },
