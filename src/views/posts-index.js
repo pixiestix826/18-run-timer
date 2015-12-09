@@ -5,15 +5,15 @@ var RunView = Backbone.View.extend({
 
   template(model) {
     // Wire up model events
-    return `<li>${model.date} - ${model.time}</li>`;
+    return `
+      <span class="list-items date">Dec 1, 2015</span>
+      <span class="list-items time">00:00:00</span>`;
   },
 
   render() {
     // Sets up the DOM
-    this.$el.html(
-      `${this.model.get('date')} - ${this.model.get('time')}
+    this.$el.html(this.template(this.model));
 
-        <a href="#new"><i class="fa fa-plus-circle"></i></i></a>`);
     return this.$el;
   },
 });
@@ -22,6 +22,10 @@ export default Backbone.View.extend({
   collection: null,
 
   tagName: 'ul',
+
+  attributes: {
+    class: 'run-list',
+  },
 
   initialize() {
     // Setup events
@@ -35,10 +39,14 @@ export default Backbone.View.extend({
     this.$el.empty();
 
     // For each item in collection make a new 'li'
-    this.collection.forEach((post) => {
-      var listItem = new RunView({model: post});
+    this.collection.forEach((run) => {
+      var listItem = new RunView({model: run});
 
       this.$el.append(listItem.render());
     });
+
+    this.$el.append(`<li class="new-btn">
+      <a href="#new" class="plus button"><i class="fa fa-plus"></i></a>
+    </li>`);
   },
 });
