@@ -6,8 +6,8 @@ var RunView = Backbone.View.extend({
   template(model) {
     // Wire up model events
     return `
-      <span class="list-items date">Dec 1, 2015</span>
-      <span class="list-items time">00:00:00</span>`;
+      <span class="list-items date">${model.get('date')}</span>
+      <span class="list-items time">${model.get('time')}</span>`;
   },
 
   render() {
