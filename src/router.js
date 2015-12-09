@@ -8,25 +8,25 @@ var Router = Backbone.Router.extend({
   routes: {
     '': 'listAllRuns',
     new: 'newRun',
-    ':id': 'runDetail',
+    ':id': 'runDetails',
     ':id/edit': 'editRun',
   },
 
-  posts: null,
+  allRuns: null,
 
   cleanUpListners() {
     // Stops run details from showing up again
-    this.posts.off('sync');
+    this.allRuns.off('sync');
   },
 
   initialize() {
-    this.posts = new RunListCollection();
-    this.posts.fetch();
+    this.allRuns = new RunListCollection();
+    this.allRuns.fetch();
   },
 
   listAllRuns() {
     // Create an instance of RunIndexView
-    var runIndex = new RunIndexView({collection: this.posts});
+    var runIndex = new RunIndexView({collection: this.allRuns});
 
     $('#outlet').html(runIndex.el);
   },
@@ -38,7 +38,7 @@ var Router = Backbone.Router.extend({
     var run = new RunPost();
 
     // Show form to user
-    var form = new RunFormView({model: run, collection: this.posts});
+    var form = new RunFormView({model: run, collection: this.allRuns});
 
     $('#outlet').html(form.el);
   },
@@ -46,7 +46,7 @@ var Router = Backbone.Router.extend({
   runDetails(id) {
     var showEditForm = () => {
       // Get a run by its id from the collection
-      this.run.get(id);
+      var run = this.allRuns.get(id);
 
       // Only create view if run is found
       if (run) {
@@ -62,7 +62,7 @@ var Router = Backbone.Router.extend({
     showEditForm();
 
     // Try to show edit form on collection sync
-    this.contacts.on('sync', showEditForm);
+    this.allRuns.on('sync', showEditForm);
   },
 });
 

@@ -47,8 +47,8 @@ export default Backbone.View.extend({
        </li>
       </ul>
 
-      <button class="btn cancel">CANCEL</button>
-      <button class="btn save">SAVE</button>
+      <a href="#"><button class="btn cancel">CANCEL</button></a>
+      <a href="#runDetail"><button class="btn save">SAVE</button></a>
 
     </div>
     `;
