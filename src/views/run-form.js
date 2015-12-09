@@ -38,11 +38,11 @@ export default Backbone.View.extend({
   template(model) {
     return `
     <div class="new-run">
-      <h1 class="heading">New Run</h1>
+      <h1 class="new-heading">New Run</h1>
       <ul >
        <li>
-        <input class="run-items" type="time" id="run-time" placeholder="Run Time" value="${model.get('time')}">
-        <input class="run-items" type="date" id="run-date" placeholder="Run Date" value="${model.get('date')}">
+        <input class="run-items" type="text" id="run-time" placeholder="Run Time" value="${model.get('time')}">
+        <input class="run-items" type="text" id="run-date" placeholder="Run Date" value="${model.get('date')}">
         <input class="run-items" id="run-notes" placeholder="Run Notes" value="${model.get('notes')}">
        </li>
       </ul>
