@@ -41,9 +41,9 @@ export default Backbone.View.extend({
       <h1 class="new-heading">New Run</h1>
       <ul >
        <li>
-        <input class="run-items" type="text" id="run-time" placeholder="Run Time" value="${model.get('time')}">
-        <input class="run-items" type="text" id="run-date" placeholder="Run Date" value="${model.get('date')}">
-        <input class="run-items" id="run-notes" placeholder="Run Notes" value="${model.get('notes')}">
+        <input class="new-run-items" type="text" id="run-time" placeholder="Run Time" value="${model.get('time')}">
+        <input class="new-run-items" type="text" id="run-date" placeholder="Run Date" value="${model.get('date')}">
+        <input class="new-run-items" type="text" id="run-notes" placeholder="Run Notes" value="${model.get('notes')}">
        </li>
       </ul>
 

@@ -20,7 +20,7 @@ export default Backbone.View.extend({
         <input class="run-items" id="run-notes" placeholder="Run Notes" value="${model.get('notes')}">
 
         <a href="#"><button class="btn back"><</button></a>
-        <a href#editRun class="btn edit"><i class="fa fa-pencil"></i></a>
+        <a href="#${model.id}/edit" class="btn edit"><i class="fa fa-pencil"></i></a>
     `;
   },
 });

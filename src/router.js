@@ -4,6 +4,8 @@ import RunIndexView from './views/posts-index';
 import RunFormView from './views/run-form';
 import RunDetailView from './views/run-detail';
 
+// import RunEditView from './views/run-edit';
+
 var Router = Backbone.Router.extend({
   routes: {
     '': 'listAllRuns',
@@ -52,6 +54,28 @@ var Router = Backbone.Router.extend({
       if (run) {
         // Create detailView
         var detailView = new RunDetailView({model: run, collection: this.runs});
+
+        // Put detailView into outlet
+        $('#outlet').html(detailView.el);
+      }
+    };
+
+    // Try to show edit form immediately
+    showEditForm();
+
+    // Try to show edit form on collection sync
+    this.allRuns.on('sync', showEditForm);
+  },
+
+  editRun(id) {
+    var showEditForm = () => {
+      // Get a run by its id from the collection
+      var run = this.allRuns.get(id);
+
+      // Only create view if run is found
+      if (run) {
+        // Create detailView
+        var detailView = new RunFormView({model: run, collection: this.runs});
 
         // Put detailView into outlet
         $('#outlet').html(detailView.el);
