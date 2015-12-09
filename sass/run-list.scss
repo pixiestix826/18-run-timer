@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .run-list {
   margin: 1.5rem 1rem 4rem 0.8rem;
   padding-bottom: 0.5rem;
@@ -6,6 +10,7 @@
   li {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     border-bottom: 1px $Placeholder-Text solid;
   }
 }
