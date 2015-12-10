@@ -20,7 +20,7 @@ export default Backbone.View.extend({
       // Save the model
       this.model.save({date, time, notes}).then(() => {
         // Redirect somewhere
-        this.collection.add(this.allRuns);
+        this.collection.add(this.listAllRuns);
 
         Backbone.history.navigate('', {trigger: true});
       });
