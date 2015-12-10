@@ -15,8 +15,8 @@ export default Backbone.View.extend({
     return `
     <div class="run-detail">
       <h1 class="my-heading">My Run</h1>
-        <span class="list-items date">${model.get('date')}</span>
-        <span class="list-items time">${model.get('time')}</span>
+        <span class="run-items date">${model.get('date')}</span>
+        <span class="run-items time">${model.get('time')}</span>
         <input class="run-items" id="run-notes" placeholder="Run Notes" value="${model.get('notes')}">
 
         <a href="#"><button class="btn back"><</button></a>

@@ -1,3 +1,6 @@
+a {
+  text-decoration: none;
+}
 .my-heading {
   color: $Title-White;
   margin-left: 1rem;
@@ -23,16 +26,28 @@
 }
 
 #run-notes {
+  margin-left: 1rem;
   width: 100%;
   height: 8rem;
 }
 
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .date {
+  margin-left: 1rem;
+  flex: 1;
   color: $Regular-Text;
 }
 
 .time {
+  float: right;
+  flex: 1;
   color: $Green-Text;
+  margin-right: 1rem;
 }
 
 .fa {
@@ -53,7 +68,10 @@
   width: 3rem;
   height: 3rem;
   border-radius: 100%;
-  bottom: 0;
+  margin: 0;
+  bottom: 3.5rem;
   left: 1rem;
   background: $Button-Grey;
+  font-size: 1.5rem;
+  line-height: 1rem;
 }

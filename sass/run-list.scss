@@ -2,18 +2,11 @@ a {
   text-decoration: none;
 }
 
-.run-list {
-  margin: 1.5rem 1rem 4rem 0.8rem;
-  padding-bottom: 0.5rem;
-  background: $Background-Black;
-
   li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin: 1rem;
     border-bottom: 1px $Placeholder-Text solid;
   }
-}
+
 
 .list-items {
   font-size: 1.5rem;
@@ -21,7 +14,6 @@ a {
 }
 
 .date {
-  flex: 1;
   color: $Regular-Text;
 }
 
