@@ -20,7 +20,7 @@ export default Backbone.View.extend({
       // Save the model
       this.model.save({date, time, notes}).then(() => {
         // Redirect somewhere
-        this.collection.add(this.listAllRuns);
+        this.collection.add(this.model);
 
         Backbone.history.navigate('', {trigger: true});
       });
@@ -44,10 +44,10 @@ export default Backbone.View.extend({
         <input class="new-run-items" type="text" id="run-date" placeholder="Run Date" value="${model.get('date')}">
         <input class="new-run-items" type="text" id="run-notes" placeholder="Run Notes" value="${model.get('notes')}">
 
-
-      <a href="#"><button class="btn cancel">CANCEL</button></a>
-      <a href="#"><button class="btn save">SAVE</button></a>
-
+      <div>
+        <a href="#"><button class="btn cancel">CANCEL</button></a>
+        <a href="#"><button class="btn save">SAVE</button></a>
+      </div>
     </div>
     `;
   },

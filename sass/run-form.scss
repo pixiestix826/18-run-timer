@@ -1,22 +1,20 @@
 .new-heading {
   color: $Title-White;
-  margin-left: 1rem;
   font-weight: lighter;
+}
+
+.new-run {
+  margin: 1rem;
 }
 
 .new-run-items {
   font-size: 1.5rem;
   height: 4rem;
   width: 100%;
-  margin: 1rem;
   color: $Placeholder-Text;
   border: none;
   background: $Background-Black;
   border-bottom: 1px $Placeholder-Text solid;
-}
-
-#run-notes {
-  line-height: 6rem;
 }
 
 .btn {
@@ -24,18 +22,15 @@
   width: 6rem;
   border-radius: 2px;
   border: none;
-  margin: 2rem 0 15rem 1rem;
 }
 
 .save {
-  position: fixed;
-  bottom: 0;
-  right: 1rem;
+  float: right;
+  margin-top: 2.5rem;
   background: $Button-Green;
-  text-align: center;
+  padding-left: 1rem;
 }
 .cancel {
-  position: fixed;
-  bottom: 0;
+  margin-top: 2.5rem;
   background: $Button-Grey;
 }

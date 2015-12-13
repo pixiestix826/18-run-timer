@@ -53,7 +53,7 @@ var Router = Backbone.Router.extend({
       // Only create view if run is found
       if (run) {
         // Create detailView
-        var detailView = new RunDetailView({model: run, collection: this.runs});
+        var detailView = new RunDetailView({model: run, collection: this.allRuns});
 
         // Put detailView into outlet
         $('#outlet').html(detailView.el);
@@ -75,7 +75,7 @@ var Router = Backbone.Router.extend({
       // Only create view if run is found
       if (run) {
         // Create detailView
-        var detailView = new RunFormView({model: run, collection: this.runs});
+        var detailView = new RunFormView({model: run, collection: this.allRuns});
 
         // Put detailView into outlet
         $('#outlet').html(detailView.el);
