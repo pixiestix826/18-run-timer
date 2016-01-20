@@ -31,19 +31,19 @@ vendorScripts = new Funnel(vendorScripts, {
   files: vendorFiles,
 });
 
-vendorScripts = Concat(vendorScripts, {
+vendorScripts = new Concat(vendorScripts, {
   inputFiles: vendorFiles,
   outputFile: '/vendor.js',
 });
 
-var appScript = Babel('src', {
+var appScript = new Babel('src', {
   browserPolyfill: true,
   stage: 0,
   moduleIds: true,
   modules: 'amd',
 });
 
-appScript = Concat(appScript, {
+appScript = new Concat(appScript, {
   inputFiles: [
     '**/*.js',
   ],

@@ -4,3 +4,54 @@
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 @import "font-awesome";
 @import "box-sizing";
+
+$Button-Grey: #ddd;
+$Button-Green: #80cbc4;
+$Header-Bar-Blue: #00bbd3;
+$Title-White: #fff;
+$Regular-Text: rgba(255, 255, 255, 0.6);
+$Placeholder-Text: rgba(255, 255, 255, 0.4);
+$Green-Text: #92cbc5;
+$Button-Text-Grey: #1c1c1c;
+$Background-Black: #242524;
+
+html {
+  background: $Background-Black;
+}
+.container {
+  background: $Background-Black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.heading {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 4rem;
+  background: $Header-Bar-Blue;
+  color: $Title-White;
+  font-size: 24px;
+  line-height: 4.5rem;
+  padding-left: 1rem;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+@import "run-list";
+@import "run-form";
+@import "run-detail";

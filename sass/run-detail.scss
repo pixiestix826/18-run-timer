@@ -1,0 +1,70 @@
+a {
+  text-decoration: none;
+}
+.my-heading {
+  color: $Title-White;
+  margin-left: 1rem;
+  font-weight: lighter;
+}
+
+.run-detail {
+  background: $Background-Black;
+}
+.run-record {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.run-items {
+  flex: 1;
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  color: $Placeholder-Text;
+}
+
+#detail-run-notes {
+  width: 100%;
+  margin-left: 1rem;
+  height: 8rem;
+}
+
+.date {
+  margin-left: 1rem;
+  flex: 1;
+  color: $Regular-Text;
+}
+
+.time {
+  float: right;
+  flex: 1;
+  color: $Green-Text;
+  margin-right: 1rem;
+}
+
+.fa {
+  font-size: 2rem;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 100%;
+  bottom: 3.5rem;
+  right: 1rem;
+  background: $Button-Green;
+  color: $Button-Grey;
+}
+.back {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  margin: 0;
+  bottom: 3.5rem;
+  left: 1rem;
+  background: $Button-Grey;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}

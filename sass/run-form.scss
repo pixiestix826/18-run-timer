@@ -1,0 +1,36 @@
+.new-heading {
+  color: $Title-White;
+  font-weight: lighter;
+}
+
+.new-run {
+  margin: 1rem;
+}
+
+.new-run-items {
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 100%;
+  color: $Placeholder-Text;
+  border: none;
+  background: $Background-Black;
+  border-bottom: 1px $Placeholder-Text solid;
+}
+
+.btn {
+  padding: 0.8rem;
+  width: 6rem;
+  border-radius: 2px;
+  border: none;
+}
+
+.save {
+  float: right;
+  margin-top: 2.5rem;
+  background: $Button-Green;
+  padding-left: 1rem;
+}
+.cancel {
+  margin-top: 2.5rem;
+  background: $Button-Grey;
+}
