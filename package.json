@@ -4,7 +4,8 @@
   "description": "",
   "main": "public/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "broccoli build dist && surge dist bsoucy-run-timer.surge.sh && trash dist"
   },
   "author": "",
   "license": "ISC",
